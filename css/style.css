@@ -12,7 +12,6 @@ body{
   min-width: 950px;
   height:100vh;
   display: flex;
-
 }
 .left{
   flex-direction: column;
