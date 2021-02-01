@@ -3,9 +3,6 @@
   padding:0;
   box-sizing: border-box;
 }
-body{
-
-}
 .container{
   margin:0 auto;
   background-color: lightgrey;
@@ -26,29 +23,79 @@ body{
   height: 100%;
 }
 .header-left{
+  display:flex;
+  justify-content: flex-end;
   background-color: lightblue;
   border: 1px solid white;
   height: 15%;
+  padding:20px;
+}
+.header-left img{
+  border-radius: 50px;
+  width:80px;
 }
 .notifiche{
-  background-color: lightblue;
-  border: 1px solid white;
-  height: 15%;
-}
-.barra-ricerca{
+  display: flex;
+  align-items: center;
   background-color: lightblue;
   border: 1px solid white;
   height: 10%;
+  padding: 5px;
+}
+.notifiche i{
+  font-size: 30px;
+  border-radius: 50px;
+  text-align: center;
+  background-color: white;
+  color: lightgrey;
+}
+.barra-ricerca{
+  display: flex;
+  background-color: lightblue;
+  border: 3px solid white;
+  height: 10%;
+  padding:5px;
+}
+.barra-ricerca input{
+  width: 100%;
+  height: 100%;
+  font-size: 20px;
+  border-radius: 10px;
+  padding:5px;
+  text-align:center;
+}
+.barra-ricerca input:focus{
+  outline:0;
 }
 .contatti{
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
   background-color: lightpink;
   border: 1px solid white;
   height: 100%;
 }
+.contatti img{
+  width:80px;
+  border-radius:50px;
+  padding-top:10px;
+  padding-left:20px;
+}
+.scroll{
+  height: 100%;
+  overflow-y: auto;
+}
 .header-right{
+  display: flex;
   background-color: lightblue;
   border: 1px solid white;
   height: 15%;
+  padding:20px;
+}
+.header-right img{
+  justify-content: flex-start;
+  border-radius: 50px;
+  width:80px;
 }
 .chat{
   background-color:violet;
@@ -56,20 +103,25 @@ body{
   height: 100%;
 }
 .footer-right{
+  display: flex;
+  justify-content: space-between;
   background-color:lightyellow;
   border: 1px solid white;
-  height: 15%;
+  height: 10%;
+  padding:5px;
+}
+.footer-right input{
+  width: 100%;
+  height: 100%;
+  font-size: 20px;
+  border-radius: 10px;
+  padding:10px;
+  text-align:left;
+}
+.footer-right input:focus{
+  outline:0;
 }
 i{
-width: 50px;
-}
-.contatti img{
-  display:flex;
-  flex-direction: column;
-  width:15%;
-  border-radius: 50%;
-}
-.scroll{
-  height: 100%;
-  overflow-y: auto;
+font-size: 20px;
+padding:15px;
 }
