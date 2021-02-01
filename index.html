@@ -9,6 +9,9 @@
   <script src="https://cdn.jsdelivr.net/npm/vue"></script>
   <!-- cdn fonawesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+  <!-- google-font -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
   <title>boolzap</title>
 </head>
 <body>
@@ -16,46 +19,90 @@
   <div id="app" class="container">
     <!-- left -->
     <div class="left">
+      <!-- header left -->
       <div class="header-left">
-        <img src="img/avatar_6.jpg" alt="">
-        <i class="fas fa-circle-notch"></i>
-        <i class="fas fa-comment-alt"></i>
-        <i class="fas fa-ellipsis-v"></i>
+        <div class="nome-utente">
+          <img src="img/avatar_6.jpg" alt="">
+          <span>Nome Utente</span>
+        </div>
+        <div>
+          <i class="fas fa-circle-notch"></i>
+          <i class="fas fa-comment-alt"></i>
+          <i class="fas fa-ellipsis-v"></i>
+        </div>
       </div>
+      <!-- notifiche -->
       <div class="notifiche">
         <i class="far fa-bell-slash"></i>
-        Ricevi notifiche di nuovi messaggi <span>
-          Attiva notifiche desktop
-        </span>
+        <div class="testo">
+          <h4>Ricevi notifiche di nuovi messaggi</h4>
+          <span>Attiva notifiche desktop</span>
+        </div>
       </div>
+      <!-- barra ricerca -->
       <div class="barra-ricerca">
-        <i class="fas fa-search"> </i>
-        <input type="text" placeholder="Cerca o inizia una nuova chat">
-
+        <div>
+          <i class="fas fa-search"></i>
+          <input type="text" placeholder="Cerca o inizia una nuova chat">
+        </div>
       </div>
       <!-- contatti -->
       <div class="contatti scroll">
-        <img src="img/avatar_1.jpg" alt="">
-        <img src="img/avatar_2.jpg" alt="">
-        <img src="img/avatar_3.jpg" alt="">
-        <img src="img/avatar_4.jpg" alt="">
-        <img src="img/avatar_5.jpg" alt="">
-        <img src="img/avatar_6.jpg" alt="">
-        <img src="img/avatar_7.jpg" alt="">
-        <img src="img/avatar_8.jpg" alt="">
-      </div> <!-- /contatti -->
+        <div class="nome-utente">
+          <img src="img/avatar_1.jpg" alt="">
+          <h4>Michele</h4>
+        </div>
+        <div class="nome-utente">
+          <img src="img/avatar_2.jpg" alt="">
+          <h4>Giovanni</h4>
+        </div>
+        <div class="nome-utente">
+          <img src="img/avatar_3.jpg" alt="">
+          <h4>Tommaso</h4>
+        </div>
+        <div class="nome-utente">
+          <img src="img/avatar_4.jpg" alt="">
+          <h4>Giulio</h4>
+        </div>
+        <div class="nome-utente">
+          <img src="img/avatar_5.jpg" alt="">
+          <h4>Piero</h4>
+        </div>
+        <div class="nome-utente">
+          <img src="img/avatar_6.jpg" alt="">
+          <h4>Giorgia</h4>
+        </div>
+        <div class="nome-utente">
+          <img src="img/avatar_7.jpg" alt="">
+          <h4>Alessandro</h4>
+        </div>
+        <div class="nome-utente">
+          <img src="img/avatar_8.jpg" alt="">
+          <h4>Francesco</h4>
+        </div>
 
+      </div> <!-- /contatti -->
     </div> <!-- /left -->
 
     <!-- right -->
     <div class="right">
+      <!-- header right -->
       <div class="header-right">
-        <img src="img/avatar_1.jpg" alt="">
-        <i class="fas fa-search"></i>
-        <i class="fas fa-paperclip"></i>
-        <i class="fas fa-ellipsis-v"></i>
-      </div>
-      <div class="chat"></div>
+        <div class="utente-right">
+          <img src="img/avatar_1.jpg" alt="">
+          <h4>Michele</h4>
+          <br>Ultimo accesso alle:
+        </div>
+        <div>
+          <i class="fas fa-search"></i>
+          <i class="fas fa-paperclip"></i>
+          <i class="fas fa-ellipsis-v"></i>
+        </div>
+      </div> <!-- /header right -->
+
+      <!-- chat -->
+      <div class="chat scroll"></div>
+      <!-- footer right -->
       <div class="footer-right">
         <i class="far fa-smile"></i>
         <input type="text" placeholder="Scrivi un messaggio">
