@@ -54,7 +54,7 @@ color:grey;
 .notifiche{
   display: flex;
   align-items: center;
-    background-color:rgba(209, 206, 196, 0.6);
+  background-color:rgba(209, 206, 196, 0.6);
   border: 1px solid white;
   height: 60px;
   padding: 5px;
@@ -110,12 +110,13 @@ color:grey;
   outline:0;
 }
 .contatti{
+  height:calc(100% - 80px -60px - 60px);
   display: flex;
   align-items: flex-start;
   flex-direction: column;
   background-color: lightpink;
   border: 1px solid white;
-  height: 100%;
+
 }
 .contatti img{
   margin-left: 10px;
@@ -148,9 +149,9 @@ flex-direction:row;
   margin-right:5px;
 }
 .chat{
+  height:calc(100% - 80px - 60px);
   background-image: url(https://i.pinimg.com/originals/85/70/f6/8570f6339d3189c96e340d47a581d3b8.jpg);
   border: 1px solid white;
-  height: 100%;
 }
 .footer-right{
   display: flex;
