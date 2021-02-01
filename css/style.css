@@ -1,0 +1,63 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+body{
+
+}
+.container{
+  margin:0 auto;
+  background-color: lightgrey;
+  min-width: 950px;
+  height:100vh;
+  display: flex;
+
+}
+.left{
+  flex-direction: column;
+  background-color: lightyellow;
+  width: 35%;
+  height: 100%;
+}
+.right{
+  flex-direction: column;
+  background-color: lightgreen;
+  width: 65%;
+  height: 100%;
+}
+.header-left{
+  background-color: lightblue;
+  border: 1px solid white;
+  height: 15%;
+}
+.notifiche{
+  background-color: lightblue;
+  border: 1px solid white;
+  height: 15%;
+}
+.barra-ricerca{
+  background-color: lightblue;
+  border: 1px solid white;
+  height: 10%;
+}
+.contatti{
+  background-color: lightpink;
+  border: 1px solid white;
+  height: 60%;
+}
+.header-right{
+  background-color: lightblue;
+  border: 1px solid white;
+  height: 15%;
+}
+.chat{
+  background-color:violet;
+  border: 1px solid white;
+  height: 70%;
+}
+.footer-right{
+  background-color:lightyellow;
+  border: 1px solid white;
+  height: 15%;
+}
