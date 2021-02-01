@@ -43,7 +43,7 @@ body{
 .contatti{
   background-color: lightpink;
   border: 1px solid white;
-  height: 60%;
+  height: 100%;
 }
 .header-right{
   background-color: lightblue;
@@ -53,10 +53,23 @@ body{
 .chat{
   background-color:violet;
   border: 1px solid white;
-  height: 70%;
+  height: 100%;
 }
 .footer-right{
   background-color:lightyellow;
   border: 1px solid white;
   height: 15%;
+}
+i{
+width: 50px;
+}
+.contatti img{
+  display:flex;
+  flex-direction: column;
+  width:15%;
+  border-radius: 50%;
+}
+.scroll{
+  height: 100%;
+  overflow-y: auto;
 }
