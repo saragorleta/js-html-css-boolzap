@@ -51,14 +51,17 @@
       </div>
       <!-- contatti -->
       <div class="contatti scroll">
-        <div v-if="contatti.length > 0">
-          <div v-for="(contatto,index) in contatti">
-            <div class="nome-utente">
-              <img :src='contatto.avatar' alt="" @click='aggiungiContatto(index)'>
-              <h4>{{contatto.nome}}</h4>
+          <div class="container-contatto">
+          <div v-if="contatti.length > 0">
+            <div v-for="(contatto,index) in contatti">
+              <div class="nome-utente">
+                <img :src='contatto.avatar' alt="" @click='aggiungiContatto(index)'>
+                <h4>{{contatto.nome}}</h4>
+              </div>
             </div>
           </div>
         </div>
+
 
       </div> <!-- /contatti -->
     </div> <!-- /left -->
@@ -68,12 +71,12 @@
       <!-- header right -->
       <div class="header-right">
         <div class="utente-right">
-          <!-- <img src="img/avatar_1.jpg" alt=""> -->
-        <!-- <div> -->
-          <!-- <h4>Michele</h4>
-          <div>Ultimo accesso alle:</div> -->
-        <!-- </div> -->
+          <img src="img/avatar_1.jpg" alt="">
+        <div>
+          <h4>Michele</h4>
+          <div>Ultimo accesso alle:</div>
         </div>
+      </div>
 
         <div>
           <i class="fas fa-search"></i>
@@ -84,8 +87,8 @@
 
       <!-- chat -->
       <div class="chat scroll">
-        <div class="fumetto-verde">dfhgigèagjv i i</div>
-        <div class="fumetto-bianco">fyufp9a fuweiufhweuhf</div>
+        <div class="fumetto sent">Ciao sono al mercato</div>
+        <div class="fumetto received">anche io, incontriamoci</div>
       </div>
       <!-- footer right -->
       <div class="footer-right">

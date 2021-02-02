@@ -5,6 +5,8 @@
 }
 body{
   font-family: 'Roboto', sans-serif;
+  background-image: url(https://messaggimania.it/wp-content/uploads/2015/10/sfondo-whatsapp-5.jpg);
+  background-size: cover;
 }
 .container{
   margin:0 auto;
@@ -43,7 +45,7 @@ color:grey;
 .header-left{
   display:flex;
   justify-content:space-between;
-  background-color:rgba(209, 206, 196, 0.6);
+  background-color:rgb(209, 206, 196);
   border: 1px solid white;
   height: 80px;
   padding:10px;
@@ -62,7 +64,7 @@ color:grey;
 .notifiche{
   display: flex;
   align-items: center;
-  background-color:rgba(209, 206, 196, 0.6);
+  background-color:rgb(126, 183, 187);
   border: 1px solid white;
   height: 60px;
   padding: 5px;
@@ -92,7 +94,7 @@ color:grey;
   flex-direction: column;
 }
 .barra-ricerca{
-  background-color:rgba(209, 206, 196, 0.6);
+  background-color:rgb(209, 206, 196);
   border: 3px solid white;
   height: 60px;
   padding:5px;
@@ -125,6 +127,13 @@ color:grey;
   background-color:white;
   border: 1px solid white;
 }
+.container-contatto{
+  width: 100%;
+}
+.nome-utente:hover{
+  background-color:rgb(128, 204, 197);
+}
+
 .contatti img{
   margin-left: 10px;
   margin-top: 10px;
@@ -137,13 +146,11 @@ color:grey;
 .contatti h4, img{
 flex-direction:row;
 }
-.nome-utente:hover{
-  background-color: lightblue;
-}
+
 .header-right{
   display: flex;
   justify-content: space-between;
-  background-color:rgba(209, 206, 196, 0.6);
+  background-color:rgb(209, 206, 196);
   border: 1px solid white;
   height: 80px;
   padding:10px;
@@ -160,27 +167,31 @@ flex-direction:row;
 }
 .chat{
   height:calc(100% - 80px - 60px);
+  background-size:contain;
   background-image: url(https://i.pinimg.com/originals/85/70/f6/8570f6339d3189c96e340d47a581d3b8.jpg);
   border: 1px solid white;
 }
-.fumetto-verde{
-  
-  border-radius: 30px;
+.chat .fumetto{
+  padding:15px;
+  margin:10px 40px;
+  border-radius:20px;
+  word-break: break-all;
 
-  background-color: lightgreen;
-  padding:5px;
 }
-.fumetto-bianco{
-  display: flex;
-  justify-content:space-between;
-  background-color: white;
-  padding:5px;
-
+.sent{
+  float:right;
+  clear:both;
+  background-color:lightgreen;
+}
+.received{
+  float:left;
+  clear:both;
+  background-color:white;
 }
 .footer-right{
   display: flex;
   justify-content: space-between;
-  background-color:rgba(209, 206, 196, 0.6);
+  background-color:rgb(209, 206, 196);
   border: 1px solid white;
   height: 60px;
   padding:5px;
