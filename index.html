@@ -54,7 +54,7 @@
         <div v-if="contatti.length > 0">
           <div v-for="(contatto,index) in contatti">
             <div class="nome-utente">
-              <img :src='contatto.avatar' alt="">
+              <img :src='contatto.avatar' alt="" @click='aggiungiContatto(index)'>
               <h4>{{contatto.nome}}</h4>
             </div>
           </div>
@@ -68,11 +68,11 @@
       <!-- header right -->
       <div class="header-right">
         <div class="utente-right">
-          <img src="img/avatar_1.jpg" alt="">
-        <div>
-          <h4>Michele</h4>
-          <div>Ultimo accesso alle:</div>
-        </div>
+          <!-- <img src="img/avatar_1.jpg" alt=""> -->
+        <!-- <div> -->
+          <!-- <h4>Michele</h4>
+          <div>Ultimo accesso alle:</div> -->
+        <!-- </div> -->
         </div>
 
         <div>

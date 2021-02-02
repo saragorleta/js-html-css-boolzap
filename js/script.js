@@ -1,6 +1,8 @@
 var app = new Vue({
     el:"#app",
     data:{
+      elementoChat:'',
+
       mioProfilo:
 
         {
@@ -26,18 +28,11 @@ var app = new Vue({
             avatar:'img/avatar_4.jpg'
           },
       ]
+    },
+    methods: {
+      aggiungiContatto(index){
+        this.contatti.push(this.elementoChat);
+        console.log(index);
+      }
     }
   });
-
-  //   for(let i = 0; i < contatti.length; i++){
-  //   //destrutturiamo
-  //   const {nome,avatar} = contatti[i];
-  //
-  //   //stampiamoli usando il template literal
-  //   document.getElementByClassName('contatti').innerHTML += `
-  //   <div>
-  //
-  //     ${avatar} - ${nome}
-  //   </div>
-  //   `;
-  // }
