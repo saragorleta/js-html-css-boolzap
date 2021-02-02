@@ -163,6 +163,20 @@ flex-direction:row;
   background-image: url(https://i.pinimg.com/originals/85/70/f6/8570f6339d3189c96e340d47a581d3b8.jpg);
   border: 1px solid white;
 }
+.fumetto-verde{
+  
+  border-radius: 30px;
+
+  background-color: lightgreen;
+  padding:5px;
+}
+.fumetto-bianco{
+  display: flex;
+  justify-content:space-between;
+  background-color: white;
+  padding:5px;
+
+}
 .footer-right{
   display: flex;
   justify-content: space-between;

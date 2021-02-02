@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="css/style.css">
-  <!-- cdv vue -->
+  <!-- cdn vue -->
   <script src="https://cdn.jsdelivr.net/npm/vue"></script>
   <!-- cdn fonawesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
@@ -22,8 +22,8 @@
       <!-- header left -->
       <div class="header-left">
         <div class="nome-utente-header-left">
-          <img src="img/avatar_6.jpg" alt="">
-          <span>Nome Utente</span>
+          <img :src="mioProfilo.avatar" alt="">
+          <span>{{mioProfilo.nome}}</span>
         </div>
         <div>
           <i class="fas fa-circle-notch"></i>
@@ -51,37 +51,13 @@
       </div>
       <!-- contatti -->
       <div class="contatti scroll">
-        <div class="nome-utente">
-          <img src="img/avatar_1.jpg" alt="">
-          <h4>Michele</h4>
-        </div>
-        <div class="nome-utente">
-          <img src="img/avatar_2.jpg" alt="">
-          <h4>Giovanni</h4>
-        </div>
-        <div class="nome-utente">
-          <img src="img/avatar_3.jpg" alt="">
-          <h4>Tommaso</h4>
-        </div>
-        <div class="nome-utente">
-          <img src="img/avatar_4.jpg" alt="">
-          <h4>Giulio</h4>
-        </div>
-        <div class="nome-utente">
-          <img src="img/avatar_5.jpg" alt="">
-          <h4>Piero</h4>
-        </div>
-        <div class="nome-utente">
-          <img src="img/avatar_6.jpg" alt="">
-          <h4>Giorgia</h4>
-        </div>
-        <div class="nome-utente">
-          <img src="img/avatar_7.jpg" alt="">
-          <h4>Alessandro</h4>
-        </div>
-        <div class="nome-utente">
-          <img src="img/avatar_8.jpg" alt="">
-          <h4>Francesco</h4>
+        <div v-if="contatti.length > 0">
+          <div v-for="(contatto,index) in contatti">
+            <div class="nome-utente">
+              <img :src='contatto.avatar' alt="">
+              <h4>{{contatto.nome}}</h4>
+            </div>
+          </div>
         </div>
 
       </div> <!-- /contatti -->
@@ -107,7 +83,10 @@
       </div> <!-- /header right -->
 
       <!-- chat -->
-      <div class="chat scroll"></div>
+      <div class="chat scroll">
+        <div class="fumetto-verde">dfhgigèagjv i i</div>
+        <div class="fumetto-bianco">fyufp9a fuweiufhweuhf</div>
+      </div>
       <!-- footer right -->
       <div class="footer-right">
         <i class="far fa-smile"></i>
@@ -121,6 +100,7 @@
 
 
   </div> <!-- /container -->
+<script src="js/script.js" charset="utf-8"></script>
 
 </body>
 </html>
