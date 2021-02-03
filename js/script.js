@@ -2,6 +2,7 @@ var app = new Vue({
     el:"#app",
     data:{
       arrayVuoto:'',
+
       indexUtenteSelezionato:0,
 
       mioProfilo:{
@@ -101,6 +102,7 @@ var app = new Vue({
       },
       aggiungiTesto(){
         this.contatti.push(this.arrayVuoto);
+        console.log(arrayVuoto);
         this.arrayVuoto='';
       }
     }
