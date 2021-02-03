@@ -1,7 +1,8 @@
 var app = new Vue({
     el:"#app",
     data:{
-      elementoChat:'',
+      
+      indexUtenteSelezionato:0,
 
       mioProfilo:
 
@@ -31,7 +32,7 @@ var app = new Vue({
     },
     methods: {
       aggiungiContatto(index){
-        this.contatti.push(this.elementoChat);
+        this.indexUtenteSelezionato=index;
         console.log(index);
       }
     }
