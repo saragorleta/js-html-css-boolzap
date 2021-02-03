@@ -206,3 +206,6 @@ flex-direction:row;
 .footer-right input:focus{
   outline:0;
 }
+.active{
+  color:red;
+}

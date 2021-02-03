@@ -68,9 +68,9 @@
       <!-- header right -->
       <div class="header-right">
         <div class="utente-right">
-          <img :src="contatti.avatar" alt="">
+          <img :src="contatti[indexUtenteSelezionato].avatar" alt="">
         <div>
-          <h4>{{contatti[indexUtenteSelezionato]}}</h4>
+          <h4>{{contatti[indexUtenteSelezionato].nome}}</h4>
           <!-- <div>Ultimo accesso alle:</div> -->
         </div>
       </div>
@@ -84,13 +84,18 @@
 
       <!-- chat -->
       <div class="chat scroll">
-        <div class="fumetto sent">Ciao sono al mercato</div>
-        <div class="fumetto received">anche io, incontriamoci</div>
+        <div class="fumetto" :class="messaggio.status" v-for="(messaggio, index) in contatti[indexUtenteSelezionato].messages">
+      <!--1) prima eseguiamo il ciclo for
+          2) aggiungiamo la classe :class="messaggio.status
+          3)per visualizzare il testo -->
+          {{messaggio.text}}
+        </div>
+
       </div>
       <!-- footer right -->
       <div class="footer-right">
         <i class="far fa-smile"></i>
-        <input type="text" placeholder="Scrivi un messaggio">
+        <input type="text" @keyup.enter="aggiungiTesto" v-model="arrayVuoto" placeholder="Scrivi un messaggio" @click="aggiungiTesto">
         <i class="fas fa-microphone"></i>
       </div>
 
