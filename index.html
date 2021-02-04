@@ -48,7 +48,7 @@
       <div class="barra-ricerca">
         <div class="casella-input">
           <i class="fas fa-search"></i>
-          <input type="text" placeholder="Cerca o inizia una nuova chat">
+          <input type="text" placeholder="Cerca o inizia una nuova chat" @keyup="elementoFiltrato" v-model="nomeFiltrato">
         </div>
       </div>
       <!-- contatti -->
@@ -58,6 +58,8 @@
               <div class="nome-utente">
                 <img :src='contatto.avatar' alt="">
                 <h4>{{contatto.nome}}</h4>
+                <h5>{{hour}}</h5>
+
 
               </div>
             </div>
@@ -72,7 +74,8 @@
         <div class="utente-right">
           <img :src="contatti[indexUtenteSelezionato].avatar" alt="">
         <div>
-          <h4>{{contatti[indexUtenteSelezionato].nome + contatti[indexUtenteSelezionato].messages.date}}</h4>
+          <h4>{{contatti[indexUtenteSelezionato].nome}}</h4>
+          <h5>{{contatti[indexUtenteSelezionato].ciao}}</h5>
           <!-- <div>Ultimo accesso alle:</div> -->
         </div>
       </div>

@@ -12,6 +12,7 @@ var app = new Vue({
             nome:'Michele',
             avatar:'img/avatar_1.jpg',
             visible:'true',
+            ciao: moment().format(' h:mm:ss'),
 
             messages: [
              {
@@ -35,6 +36,8 @@ var app = new Vue({
           {
             nome:'Giovanni',
             avatar:'img/avatar_2.jpg',
+            visible:'true',
+
             messages: [
              {
                date: moment().format(' h:mm:ss'),
@@ -56,6 +59,7 @@ var app = new Vue({
           {
             nome:'Tommaso',
             avatar:'img/avatar_3.jpg',
+            visible:'true',
             messages: [
              {
                date: moment().format(' h:mm:ss'),
@@ -77,6 +81,7 @@ var app = new Vue({
           {
             nome:'Giulio',
             avatar:'img/avatar_4.jpg',
+            visible:'true',
             messages: [
              {
                date: moment().format(' h:mm:ss'),
@@ -97,48 +102,52 @@ var app = new Vue({
       parolaOk:'Ok',
 
       indexUtenteSelezionato:0,
+      nomeFiltrato:'',
+      orario:'',
+      hour:'',
     },
 
     methods: {
+
       aggiungiContatto(index){
+        const orario=moment().format(' h:mm:ss');
         this.indexUtenteSelezionato=index;
         console.log(index);
+        this.hour=orario;
+
       },
 
       aggiungiTesto(){
-          let nuovoMessaggio={
-          date:moment().format(' h:mm:ss'),
-          text: this.parolaDigitata,
-          status: 'sent'
+          const ora=moment().format(' h:mm:ss');
+          let nuovoMessaggio=
+          {
+            date:ora,
+            text: this.parolaDigitata,
+            status: 'sent'
           }
+        this.orario=ora;
         this.contatti[this.indexUtenteSelezionato].messages.push(nuovoMessaggio);
         setTimeout(this.aggiungiOk,2000);
       },
 
         aggiungiOk(){
-        let rispostaMessaggio={
+        let rispostaMessaggio=
+        {
           date:moment().format(' h:mm:ss'),
           text:this.parolaOk,
           status: 'received'
         }
         this.contatti[this.indexUtenteSelezionato].messages.push(rispostaMessaggio);
-
       },
-      // var ages = [32, 33, 16, 40];
-      //
-      // function checkAdult(age) {
-      //   return age >= 18;
-      // }
-      //
-      // function myFunction() {
-      //   document.getElementById("demo").innerHTML = ages.filter(checkAdult);
-      // }
 
-      //***************
-      // function contattoFiltrato(){
-      //   const contact=this.contatti;
-      //   return contact.filter();
-      //}
-      // });
+        elementoFiltrato(){
+        this.contatti.forEach((element) => {
+          if (element.nome.includes(this.nomeFiltrato))
+          { this.visible=true;
+          } else{
+            this.visible=false;
+          }
+        })
+      },
     }
   });
