@@ -1,10 +1,6 @@
 var app = new Vue({
     el:"#app",
     data:{
-      parolaDigitata:'',
-      parolaOk:'Ok',
-
-      indexUtenteSelezionato:0,
 
       mioProfilo:{
           nome:'Giorgia',
@@ -94,31 +90,41 @@ var app = new Vue({
              },
                ],
           },
-      ]
+      ],
+
+      parolaDigitata:'',
+
+      parolaOk:'Ok',
+
+      indexUtenteSelezionato:0,
     },
 
     methods: {
-      aggiungiTesto(){
-        let nuovoMessaggio={
-          date: '10/01/2020 15:50:00',
-          text: this.parolaDigitata,
-          status: 'sent'
-        }
-        let rispostaMessaggio={
-          date: '10/01/2020 15:50:00',
-          text: this.parolaOk,
-          status: 'received'
-        }
-        this.contatti[this.indexUtenteSelezionato].messages.push(nuovoMessaggio);
-        this.parolaDigitata='';
-        this.contatti[this.indexUtenteSelezionato].messages.push(rispostaMessaggio);
-        this.parolaOk=(setTimeOut(this.parolaOk),5000);
-      },
       aggiungiContatto(index){
         this.indexUtenteSelezionato=index;
         console.log(index);
       },
 
+      aggiungiTesto(){
+          let nuovoMessaggio={
+          date:moment().format(' h:mm:ss'),
+          text: this.parolaDigitata,
+          status: 'sent'
+          }
+        this.contatti[this.indexUtenteSelezionato].messages.push(nuovoMessaggio);
+        setTimeOut(aggiungiOk,2000);
+      },
 
+        aggiungiOk(){
+        let rispostaMessaggio={
+          date:moment().format(' h:mm:ss'),
+          text:this.parolaOk,
+          status: 'received'
+        }
+        this.contatti[this.indexUtenteSelezionato].messages.push(rispostaMessaggio);
+      },
+      // contatti.forEach((element, index) => {
+      //  this.nome
+      // });
     }
   });

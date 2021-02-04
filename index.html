@@ -90,7 +90,7 @@
       <!--1) prima eseguiamo il ciclo for
           2) aggiungiamo la classe :class="messaggio.status
           3)per visualizzare il testo -->
-          {{messaggio.text}}
+          {{messaggio.text + messaggio.date}}
         </div>
 
       </div>
@@ -98,6 +98,7 @@
       <div class="footer-right">
         <i class="far fa-smile"></i>
         <input type="text" @keyup.enter="aggiungiTesto" v-model="parolaDigitata" placeholder="Scrivi un messaggio">
+        <!-- <input type="reset" value="Reset"> -->
         <i class="fas fa-microphone"></i>
       </div>
 
