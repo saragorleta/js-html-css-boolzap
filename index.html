@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="css/style.css">
+  <!-- cdn moment -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous"></script>
   <!-- cdn vue -->
   <script src="https://cdn.jsdelivr.net/npm/vue"></script>
   <!-- cdn fonawesome -->
@@ -95,7 +97,7 @@
       <!-- footer right -->
       <div class="footer-right">
         <i class="far fa-smile"></i>
-        <input type="text" @keyup.enter="aggiungiTesto" v-model="arrayVuoto" placeholder="Scrivi un messaggio">
+        <input type="text" @keyup.enter="aggiungiTesto" v-model="parolaDigitata" placeholder="Scrivi un messaggio">
         <i class="fas fa-microphone"></i>
       </div>
 

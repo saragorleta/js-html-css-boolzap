@@ -1,7 +1,8 @@
 var app = new Vue({
     el:"#app",
     data:{
-      arrayVuoto:'',
+      parolaDigitata:'',
+      parolaOk:'Ok',
 
       indexUtenteSelezionato:0,
 
@@ -15,6 +16,7 @@ var app = new Vue({
             nome:'Michele',
             avatar:'img/avatar_1.jpg',
             visible:'true',
+
             messages: [
              {
                date: '10/01/2020 15:30:55',
@@ -90,20 +92,33 @@ var app = new Vue({
                text: 'si ma preferisco andare al cinema',
                status: 'received'
              },
-
                ],
           },
       ]
     },
+
     methods: {
+      aggiungiTesto(){
+        let nuovoMessaggio={
+          date: '10/01/2020 15:50:00',
+          text: this.parolaDigitata,
+          status: 'sent'
+        }
+        let rispostaMessaggio={
+          date: '10/01/2020 15:50:00',
+          text: this.parolaOk,
+          status: 'received'
+        }
+        this.contatti[this.indexUtenteSelezionato].messages.push(nuovoMessaggio);
+        this.parolaDigitata='';
+        this.contatti[this.indexUtenteSelezionato].messages.push(rispostaMessaggio);
+        this.parolaOk=(setTimeOut(this.parolaOk),5000);
+      },
       aggiungiContatto(index){
         this.indexUtenteSelezionato=index;
         console.log(index);
       },
-      aggiungiTesto(){
-        this.contatti.push(this.arrayVuoto);
-        console.log(arrayVuoto);
-        this.arrayVuoto='';
-      }
+
+
     }
   });
