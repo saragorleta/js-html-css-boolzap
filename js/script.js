@@ -12,7 +12,7 @@ var app = new Vue({
             nome:'Michele',
             avatar:'img/avatar_1.jpg',
             visible:'true',
-            ciao: moment().format(' h:mm:ss'),
+            format: moment().format('lll'),
 
             messages: [
              {
@@ -37,6 +37,7 @@ var app = new Vue({
             nome:'Giovanni',
             avatar:'img/avatar_2.jpg',
             visible:'true',
+            format: moment().format('lll'),
 
             messages: [
              {
@@ -60,6 +61,7 @@ var app = new Vue({
             nome:'Tommaso',
             avatar:'img/avatar_3.jpg',
             visible:'true',
+            format: moment().format('lll'),
             messages: [
              {
                date: moment().format(' h:mm:ss'),
@@ -82,6 +84,7 @@ var app = new Vue({
             nome:'Giulio',
             avatar:'img/avatar_4.jpg',
             visible:'true',
+            format: moment().format('lll'),
             messages: [
              {
                date: moment().format(' h:mm:ss'),

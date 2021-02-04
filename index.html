@@ -58,9 +58,7 @@
               <div class="nome-utente">
                 <img :src='contatto.avatar' alt="">
                 <h4>{{contatto.nome}}</h4>
-                <h5>{{hour}}</h5>
-
-
+                <h6>{{contatto.format}}</h6>
               </div>
             </div>
           </div>
@@ -75,7 +73,7 @@
           <img :src="contatti[indexUtenteSelezionato].avatar" alt="">
         <div>
           <h4>{{contatti[indexUtenteSelezionato].nome}}</h4>
-          <h5>{{contatti[indexUtenteSelezionato].ciao}}</h5>
+          <h5>{{contatti[indexUtenteSelezionato].format}}</h5>
           <!-- <div>Ultimo accesso alle:</div> -->
         </div>
       </div>
