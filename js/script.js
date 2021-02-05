@@ -130,6 +130,7 @@ var app = new Vue({
           }
         this.orario=ora;
         this.contatti[this.indexUtenteSelezionato].messages.push(nuovoMessaggio);
+        this.parolaDigitata='';
         setTimeout(this.aggiungiOk,2000);
       },
 
